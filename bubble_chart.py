@@ -41,9 +41,11 @@ fig.update_layout(
         yanchor="bottom",
         y=-0.6,
         xanchor="right",
-        x=1
+        x=1,
+        
     ),
-    yaxis=dict(title='')
+    yaxis=dict( title=''),
+    xaxis=dict( showgrid=True )
 )
 
 
