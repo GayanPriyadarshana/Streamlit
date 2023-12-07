@@ -18,11 +18,11 @@ fig = px.bar(
     y='Popularity',
     title='Popular times on Tuesdays',
     labels={'Popularity': 'peak'},
-    text='Popularity'
+    #text='Popularity'
 )
 
 # Customize the bar chart
-fig.update_traces(texttemplate='%{text}', textposition='outside')
+#fig.update_traces(texttemplate='%{text}', textposition='outside')
 fig.update_layout(
     xaxis=dict(title='Time', tickmode='array', tickvals=df['Time']),
     yaxis=dict(title=''),
