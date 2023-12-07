@@ -44,7 +44,7 @@ fig.add_shape(
 #fig.update_traces(texttemplate='%{text}', textposition='outside')
 fig.update_layout(
     xaxis=dict(title='Time', tickmode='array', tickvals=df['Time']),
-    yaxis=dict(title=''),
+    yaxis=dict(title='', showgrid=False ),
     showlegend=False
 )
 
