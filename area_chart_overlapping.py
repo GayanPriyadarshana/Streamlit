@@ -62,7 +62,7 @@ fig.update_layout(
     legend=dict(
         orientation="h",
         yanchor="top",
-        y=-0.15,
+        y=-0.17,
         xanchor="left",
         x=0.01
     )
