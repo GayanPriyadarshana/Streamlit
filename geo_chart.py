@@ -17,29 +17,33 @@ fig = px.choropleth(
     locations='iso_alpha',
     color='users',
     hover_name='iso_alpha',
-    color_continuous_scale=px.colors.sequential.Purples,
-    title='Users by region'
+    color_continuous_scale=px.colors.sequential.Purples,  # Purple color scale
+    title='Users by region',
+    scope='world',
+    projection='natural earth'
 )
 
-# Update the layout of the map to ensure the entire map is visible
+# Update the layout of the map to have a light grey color for countries with no data
 fig.update_geos(
-    visible=True, 
-    showcountries=True,
+    showframe=False,
     showcoastlines=True,
-    showland=True, 
-    fitbounds="locations"
+    showland=True,
+    landcolor='lightgrey',  # Set land color to light grey for countries with no data
 )
 
 # Customize the layout
 fig.update_layout(
     coloraxis_colorbar=dict(
         title='Number of Users',
-        tickvals=[50000, 200000, 350000, 500000, 750000]
-    ),
-    geo=dict(
-        projection_scale=1,  # this can be used to zoom in or out
-        center=dict(lat=0, lon=180)  # this will center on the Pacific area
+        tickvals=[200000, 350000, 500000, 750000],
     )
+    # legend=dict(
+    #     orientation="h",  # Horizontal legend
+    #     yanchor="bottom",
+    #     y=-0.2,  # Position of the legend (below the chart)
+    #     xanchor="center",
+    #     x=0.5  # Center the legend
+    # )
 )
 
 # Streamlit command to display the plot
