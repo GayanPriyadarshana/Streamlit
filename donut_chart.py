@@ -12,7 +12,12 @@ fig = go.Figure(data=[go.Pie(labels=categories, values=values, hole=.7, sort=Fal
 fig.update_layout(
     title_text='Phone storage',
     # Add annotations in the center of the donut pies
-    annotations=[dict(text='84%<br>used', x=0.5, y=0.5, font_size=20, showarrow=False)],
+    #annotations=[dict(text='84%<br>used', x=0.5, y=0.5, font_size=20, showarrow=False)],
+
+    annotations=[
+        dict(text='used', x=0.5, y=0.45, font_size=15, showarrow=False, font_color='grey'),
+        dict(text='<b>84%</b>', x=0.5, y=0.55, font_size=20, showarrow=False, font_color='black')
+    ],
     legend_title_text='',
     showlegend=True
 )
